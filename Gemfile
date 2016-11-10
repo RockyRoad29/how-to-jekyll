@@ -11,7 +11,6 @@ ruby RUBY_VERSION
 gem "minima", "~> 2.0"
 
 # Configure for GitHub Pages. ref: http://jekyllrb.com/docs/github-pages/
-ruby source 'https://rubygems.org'
 require 'json'
 require 'open-uri'
 versions = JSON.parse(open('https://pages.github.com/versions.json').read)
@@ -20,4 +19,8 @@ gem 'github-pages', versions['github-pages']
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
+   gem 'jekyll-compose'
+end
+
+group :development do
 end
